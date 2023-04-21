@@ -1,0 +1,14 @@
+.footerBar{
+    background: linear-gradient(to left, #4d4c4c, #ff0064 );
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.logoFooter {
+    height: 2.4rem;
+}
+
+.pRights{
+    font-size: x-small;
+}

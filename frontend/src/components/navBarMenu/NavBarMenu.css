@@ -1,0 +1,47 @@
+*{
+}
+
+.navbar{
+    background: linear-gradient(to left, #ff0064,#ffb58a );
+    height: 3.5rem;
+    padding: 0 40px;
+}
+
+.logo {
+    height: 2.5rem;
+}
+
+.logo1 {
+    height: 13rem;
+}
+
+.link {
+    color: white;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link1 {
+    padding-right: 2rem;
+}
+
+.link1:hover {
+    color: black;
+    font-weight: bold;
+}
+
+
+.navbar-toggler-icon {
+    
+}
+
+.link2 {
+    font-size: x-large;
+}
+
+.link2:hover {
+    color: #ff0064;
+    font-weight: bolder;
+}

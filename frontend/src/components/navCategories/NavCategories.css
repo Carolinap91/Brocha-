@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.navMenu {
+    color: black;
+}
+
+.navMenu:hover {
+    color: #ff0064;
+    font-weight: bold;
+    text-decoration: underline;
+    text-decoration-color: #ff0064
+}
+
+.navMenu:selected {
+    color: #ff0064;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.selectForm{
+    width: 30rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    background-color: #ececec;
+    border-radius: 20px;
+    border-style: none;
+}
+
+.profileCard{
+    display: inline-flex;
+    margin: auto;
+    margin-top: 2.5rem;
+    width: 30rem;
+    height: 10rem;
+    border-radius: 1px solid black;
+    background-color: #ececec;
+    border-radius: 20px;
+    padding: 12px;
+}
+
+.profileCard:hover {
+    background-color: rgb(207, 205, 205);
+}
+
+.imgProfileMin {
+    width: 12rem;
+    border-radius: 20px;
+}
+
+.descriptionProfileMin {
+    margin-left: 2rem;
+}
+
+.nameMin {
+    justify-content: flex-start;
+    text-decoration: underline;
+}
+
+.descriptionMin{
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: rgb(119, 117, 117);
+}
+
+.logoIcon{
+    height: 2.5rem;
+}
+
+.iconsBottonCard {
+    display: flex;
+    justify-content: space-between;
+}

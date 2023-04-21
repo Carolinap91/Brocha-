@@ -1,0 +1,44 @@
+.col-4{
+    height: 500px;
+}
+
+.selectForm2{
+    width: 20rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #ececec;
+    border-radius: 20px;
+    border-style: none;
+    padding: 0px 20px;
+}
+
+input{
+    width: 20rem;
+    height: 2.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: #ececec;
+    border-radius: 20px;
+    border-style: none;
+    padding: 0px 20px;
+}
+
+textarea {
+    width: 20rem;
+    height: 8rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: #ececec;
+    border-radius: 20px;
+    border-style: none;
+    padding: 0px 20px;
+}
+
+.tittleAdd {
+    margin: 20px 0px;
+}
+
+.inputCheck{
+    
+}
