@@ -1,12 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
-import NavBarMenu  from '../navBarMenu/NavBarMenu';
-import Footer from '../footer/Footer'
-
+import {NavBarMenu, Footer}  from '../Components';
 import './CreateUser.css'
-import {Images} from '../../img/imgSlider/imgslider11.jpg'
-import { Button } from "react-bootstrap";
 
 
 export const CreateUser = () => {
@@ -18,18 +13,11 @@ export const CreateUser = () => {
         password: true,
 
 
-
-
     });
-
-    const navigate = useNavigate();
-
 
     return (
         <div>
-            <div className="header">
-                <NavBarMenu/>
-            </div>
+
             <div className="body">
                 <div className="container" >
                     <div className="tittleAdd"><h4>¡BIENVENIDX! CREA TU PERFIL COMO ARTISTA</h4></div>
@@ -95,10 +83,7 @@ export const CreateUser = () => {
                     </div>
                     <p>campos requeridos (*) validamos que todos los perfiles cumplan con nuestras politicas y estandares en menos de 24 hrs.</p>
                 </div>
-                <Footer />
             </div>
         </div>
     );
 };
-
-export default CreateUser;

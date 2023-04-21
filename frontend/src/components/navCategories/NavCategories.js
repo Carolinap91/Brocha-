@@ -4,7 +4,7 @@ import Artist from '../../img/imgArtistas/img1.jpg';
 import LocalIcon from '../../img/icons/localIcon.png'
 import HeartIcon from '../../img/icons/heartIcon.png'
 
-function AlignmentExample() {
+export const NavCategories = () => {
     return (
         <>
             <Nav activeKey="/home">
@@ -67,5 +67,3 @@ function AlignmentExample() {
         </>
     );
 }
-
-export default AlignmentExample;

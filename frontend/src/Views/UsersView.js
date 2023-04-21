@@ -1,24 +1,11 @@
 import React from "react";
-import { useParams , Link ,useNavigate } from "react-router-dom";
-
-import NavBarMenu  from '../navBarMenu/NavBarMenu';
-import Footer from '../footer/Footer'
-
-
-
 import './Home.css'
 
 
-const UsersView = ()  => {
-
-
-
-
+export const UsersView = ()  => {
     return (
         <div>
-            <div className="header">
-                <NavBarMenu/>
-            </div>
+
             <div className="body">
                 <div class="container" >
                     <div class="row">
@@ -38,10 +25,8 @@ const UsersView = ()  => {
                         </div>
                     </div>
                 </div>
-                <Footer />
+                
             </div>
         </div>
     );
 };
-
-export default UsersView;

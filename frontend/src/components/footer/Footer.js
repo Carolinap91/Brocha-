@@ -5,7 +5,7 @@ import LogoIg from '../../img/icons/igIcon2.png'
 import LogoTwitter from '../../img/icons/twitterIcon2.png'
 import LogoFb from '../../img/icons/fbIcon2.png'
 
-function footer() {
+export const Footer = () => {
     return (
         <footer className="footerBar">   
                 <div className="row">
@@ -20,5 +20,3 @@ function footer() {
         </footer>
     );
     }
-
-export default footer;
