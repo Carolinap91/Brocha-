@@ -1,7 +1,9 @@
-*{
-}
-
 .navbar{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background: linear-gradient(to left, #ff0064,#ffb58a );
     height: 3.5rem;
     padding: 0 40px;
@@ -11,37 +13,41 @@
     height: 2.5rem;
 }
 
-.logo1 {
+.sidebar-logo {
     height: 13rem;
 }
 
-.link {
+.links {
     color: white;
     font-size: large;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    
+    flex: 1;
+    
 }
 
-.link1 {
-    padding-right: 2rem;
+.links a {
+    margin-right: 4rem;
 }
 
-.link1:hover {
+
+.links a:hover {
     color: black;
     font-weight: bold;
 }
 
-
-.navbar-toggler-icon {
-    
+.sidebar-link {
+    font-size: large !important;
 }
 
-.link2 {
-    font-size: x-large;
+.sidebar-link:hover {
+    color: #ff0064 !important;
+    font-weight: bolder !important;
 }
 
-.link2:hover {
-    color: #ff0064;
-    font-weight: bolder;
-}
+
+
+
+
+

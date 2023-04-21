@@ -2,5 +2,10 @@
     width: 420px;
     height: 620px;
     /* border: 1px solid gray; */
+    border: 1px solid green;
+}
+
+img {
+    border: 1px solid black;
 }
 

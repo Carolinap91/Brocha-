@@ -8,30 +8,22 @@ export const NavBarMenu = () => {
     <Navbar className="navbar" expand={false}>
       <Container fluid>
         {/* Title */}
-        <Navbar.Brand href="#">
-          {" "}
+        <Navbar.Brand href="/">
           <img className="logo" src={logo} alt="logo" />{" "}
         </Navbar.Brand>
 
-        <div className="link">
-          <Nav.Link href="#action1" className="link1">
+        <div className="links">
+          <Nav.Link href="/">
             Nosotros
           </Nav.Link>
-          <Nav.Link href="#action2" className="link1">
+          <Nav.Link href="/" >
             Servicios
           </Nav.Link>
-          <Nav.Link href="#action3" className="link1">
+          <Nav.Link href="/">
             Contacto
           </Nav.Link>
         </div>
-        {/* <Form className="d-flex">
-                <Form.Control
-                    type="search"
-                    className="me-2"
-                    aria-label="Buscar"
-                />
-                <Button variant="outline-success">Buscar</Button>
-            </Form> */}
+
 
         <Navbar.Toggle
           className=""
@@ -47,18 +39,18 @@ export const NavBarMenu = () => {
             <Offcanvas.Title
               id={`offcanvasNavbarLabel-expand-${false}`}
             ></Offcanvas.Title>
-            <img src={logo1} className="logo1" alt="logo1" />
+            <img src={logo1} className="sidebar-logo" alt="sidebar-logo" />
           </Offcanvas.Header>
 
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link className="link2" href="#action1">
+              <Nav.Link className="sidebar-link" href="#action1">
                 Home
               </Nav.Link>
-              <Nav.Link className="link2" href="#action2">
+              <Nav.Link className="sidebar-link" href="#action2">
                 Inicia Sesión
               </Nav.Link>
-              <Nav.Link className="link2" href="#action2">
+              <Nav.Link className="sidebar-link" href="#action2">
                 Crear Cuenta
               </Nav.Link>
             </Nav>
