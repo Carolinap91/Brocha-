@@ -1,21 +1,11 @@
 .col-4{
-    height: 500px;
+    height: 490px;
 }
 
 .selectForm2{
     width: 20rem;
     height: 2.5rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    background-color: #ececec;
-    border-radius: 20px;
-    border-style: none;
-    padding: 0px 20px;
-}
-
-input{
-    width: 20rem;
-    height: 3rem;
+    margin-top: 0.2rem;
     margin-bottom: 1rem;
     background-color: #ececec;
     border-radius: 20px;
@@ -34,10 +24,46 @@ textarea {
     padding: 0px 20px;
 }
 
-.tittleAdd {
-    margin: 20px 0px;
+.inputStyle{
+    width: 20rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    background-color: #ececec;
+    border-radius: 20px;
+    border-style: none;
+    padding: 0px 20px;
 }
 
-.inputCheck{
-    
+.tittleAdd {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonCreate{
+    height: 2rem;
+    width: 10rem;
+    color: white;
+    background-color: #ff0064;
+    border-style: none;
+    border-radius: 50px;
+    margin-left: 5rem; 
+}
+
+.checkStyle{
+    margin-left: 4rem; 
+}
+
+.subText{
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    margin-top: 1rem;
+}
+
+label{
+    font-size: smaller;
+    font-weight: bold;
+    color: gray;
+    padding-left: 0.5rem;
 }

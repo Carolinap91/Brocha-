@@ -1,0 +1,35 @@
+.category-list span {
+  background-color: #3333 !important;
+  margin-right: 8px;
+}
+
+.category-list .selected {
+  background-color: #ff0064 !important;
+}
+
+.navMenu {
+  color: black;
+}
+
+.navMenu:hover {
+  color: #ff0064;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: #ff0064;
+}
+
+.navMenu:selected {
+  color: #ff0064;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.selectForm {
+  width: 30rem;
+  height: 2.5rem;
+  padding: 0px 20px;
+  margin-top: 1rem;
+  background-color: #ececec;
+  border-radius: 20px;
+  border-style: none;
+}

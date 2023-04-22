@@ -1,0 +1,11 @@
+.no-artists-found {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.no-artists-found img {
+    max-width: 200px;
+}

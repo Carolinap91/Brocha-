@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+const bcrypt = require('bcrypt');
 
 const UsuariosSchema = new mongoose.Schema({
-    nameLastName: {
+    name: {
         type: String,
         required: [true, "Nombre y Apellido es requerido"],
         minlength: [4, "Debe tener un mínimo de 3 caracateres"]
@@ -22,7 +23,7 @@ const UsuariosSchema = new mongoose.Schema({
     description: {
         type: String,
         required: [true, "Descripción es requerido"],
-        minlength: [300, "debe tener un mínimo de 300 caracateres"],
+        minlength: [10, "debe tener un mínimo de 10 caracateres"],
     },
     instagramLink: {
         type: String,
@@ -39,6 +40,9 @@ const UsuariosSchema = new mongoose.Schema({
     images: [{
         type: String
     }],
+    profilePic: {
+        type: String
+    },
     likesCount: {
         type: Number
     },
@@ -48,47 +52,38 @@ const UsuariosSchema = new mongoose.Schema({
     region: { 
         type: String
     },
-    hstash: {
-        type: String,
-    },
+    hashtags: [{
+        type: String
+    }],
 });
+
+
+UsuariosSchema.pre('save', function(next) {
+    let user = this;
+    // only hash the password if it has been modified (or is new)
+    if (!user.isModified('password')){ return next()};
+
+    bcrypt.genSalt(4, function(err, salt) {
+        if (err) {return next(err)};
+
+        // hash the password using our new salt
+        bcrypt.hash(user.password, salt, function(err, hash) {
+            if (err) return next(err);
+            // override the cleartext password with the hashed one
+            user.password = hash;
+            next();
+        });
+    });
+});
+     
+UsuariosSchema.methods.comparePassword = function(password, callback) {
+    bcrypt.compare(password, this.password, function(err, isMatch) {
+        if (err) {return callback(err)};
+
+        callback(null, isMatch);
+    });
+};
+    
 
 const Usuarios = mongoose.model("usuarios", UsuariosSchema);
 module.exports = Usuarios;
-
-// user
-// id, nombre, mail ... ig_link, fb_link, description, likes
-// valores: 
-// 1, gonza, g@g.com, ig.....
-// 2, yane, y@y.com, ig.....
-
-// 1 -> N
-
-// images
-// id, url, user_id
-// 1, www.ig.com/123, 1
-
-// forma 3
-// id, nombre, mail ... ig_link, fb_link, description, likes, TAGS
-// 1, gonza, g@g.com, ig....., [manualiddes, bla, foo]
-
-// ---- forma 1
-// user_tags
-// user_id, tag_name
-// valores:
-// (1, "manualidades")
-// (1, "grafiti")
-// (1, "pintura")
-// (2, "manualidades")
-// (2, "Grafiti")
-
-// ---- forma 2
-// user_tags:
-// user_id, tag_id
-// 1, 1
-
-// ---- forma 2
-// tags
-// id, tag_name
-// 1, grafiti
-

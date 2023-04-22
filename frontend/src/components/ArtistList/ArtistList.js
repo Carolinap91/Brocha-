@@ -1,34 +1,29 @@
 import React from "react";
 import LocalIcon from "../../img/icons/localIcon.png";
 import HeartIcon from "../../img/icons/heartIcon.png";
+import "./ArtistList.css";
 
-
-export const ArtistList = ({ artists }) => {
-  return <div>
-      {artists.map((artist) => (
-        <div className="profileCard">
-          <div>
-            <img src={artist.profile_pic} className="imgProfileMin" alt="img profile" />{" "}
+export const ArtistList = (props) => {
+  const { artists } = props;
+  return (
+    <div>
+      {artists.map((artist, i) => (
+        <div className="profileCard" key={i}>
+          <div className="profilePic">
+            <img src={artist.profilePic} alt="img profile" />
           </div>
-          <div className="descriptionProfileMin">
-            <div className="nameMin">
-              <h5>{artist.nameLastName}</h5>
-            </div>
-            <div className="descriptionMin">
+          <div className="profileOverview">
+            <h5>{artist.name}</h5>
+            <div className="profileDescription">
               <p>{artist.description}</p>
             </div>
-            <div className="iconsBottonCard">
+            <div className="profileDetails">
               <div>
-                <h6>
-                  <span>
-                    <img src={LocalIcon} className="logoIcon" alt="logo icon" />
-                  </span>
-
-                  {artist.region}
-                </h6>
+                <span>{artist.region}</span>
+                <img src={LocalIcon} className="logoIcon" alt="logo icon" />
               </div>
               <div>
-                <span>{artist.likesCount}</span>
+                <span>{artist.likesCount || 0}</span>
                 <img src={HeartIcon} className="logoIcon" alt="logo icon" />
               </div>
             </div>
@@ -36,4 +31,5 @@ export const ArtistList = ({ artists }) => {
         </div>
       ))}
     </div>
+  );
 };

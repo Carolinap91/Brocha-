@@ -1,0 +1,18 @@
+.colStyle{
+
+}
+
+.tittleLogin{
+    display: flex;
+    justify-content: center;
+    color:#ff0064; ;
+    margin-top: 8rem;
+}
+
+.create {
+    margin-top: 4rem;
+    font-size: smaller;
+    font-weight: bold;
+    color: gray;
+
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                   

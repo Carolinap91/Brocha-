@@ -1,7 +1,9 @@
-
+.col-6{
+    display: flex;
+    justify-content: center;
+}
 .textTitle{
     margin-top: 1.2rem;
-
 }
 
 .navCategories{

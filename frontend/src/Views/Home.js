@@ -1,5 +1,5 @@
 import React from "react";
-import {SliderCarousel, NavCategories, ArtistSearch} from '../Components';
+import {SliderCarousel, ArtistSearch} from '../Components';
 
 import './Home.css'
 
@@ -17,7 +17,3 @@ export const Home = () => {
         </div>
     )
         };
-
-
-
-
