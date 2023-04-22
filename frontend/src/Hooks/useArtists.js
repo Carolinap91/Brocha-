@@ -10,10 +10,8 @@ export const useArtists = (filters = {}) => {
     try {
       setIsLoading(true);
       const result = await searchUsers(filters);
-      console.log('results', result)
       setArtists(result);
     } catch (error) {
-        console.log('error', error)
       setError(error);
     } finally {
       setIsLoading(false);

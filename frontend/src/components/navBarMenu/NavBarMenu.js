@@ -44,13 +44,13 @@ export const NavBarMenu = () => {
 
           <Offcanvas.Body>
             <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link className="sidebar-link" href="#action1">
+              <Nav.Link className="sidebar-link" href="/">
                 Home
               </Nav.Link>
-              <Nav.Link className="sidebar-link" href="#action2">
+              <Nav.Link className="sidebar-link" href="/login">
                 Inicia Sesión
               </Nav.Link>
-              <Nav.Link className="sidebar-link" href="#action2">
+              <Nav.Link className="sidebar-link" href="/signup">
                 Crear Cuenta
               </Nav.Link>
             </Nav>

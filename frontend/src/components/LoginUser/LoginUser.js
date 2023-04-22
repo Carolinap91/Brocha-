@@ -17,18 +17,7 @@ export const LoginUser = () => {
             <input className="checkStyle" type="checkbox" id="checkbox" name="checkbox" value="checkbox"/>
             <label for="checkbox"> Recordar Contraseña </label><br/>
 
-            <button className="buttonCreate">Ingresar</button>
-
-            <div className="create">
-            <label>¿ERES ARTISTA? ¡PROMOCIONATE!</label><br/>
-            <button className="buttonCreate">Crear Usuario</button>
-            </div>
-
-        
-            
-                                
-                                
-
+            <button className="buttonCreate">Ingresar</button>                                   
         </div>
     )
         };

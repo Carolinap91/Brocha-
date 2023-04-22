@@ -28,10 +28,11 @@ export const ArtistFilters = ({
   return (
     <>
       <div className="category-list">
-        {artTypes.map((type) => {
+        {artTypes.map((type, i) => {
           const isSelected = activeFilters["typeArt"] === type;
           return (
             <Badge
+              key={i}
               className={isSelected ? "selected" : ""}
               disabled={disabled}
               pill

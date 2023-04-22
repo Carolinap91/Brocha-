@@ -1,7 +1,3 @@
-.col-4{
-    height: 490px;
-}
-
 .selectForm2{
     width: 20rem;
     height: 2.5rem;
@@ -48,6 +44,11 @@ textarea {
     border-style: none;
     border-radius: 50px;
     margin-left: 5rem; 
+}
+
+ .invalid {
+    background-color: #3333;
+    
 }
 
 .checkStyle{

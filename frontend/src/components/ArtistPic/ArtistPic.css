@@ -1,0 +1,14 @@
+.artistPic{
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50px;
+    object-fit: cover;
+}
+
+.hashtagsStyle {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    color: gray;
+    font-weight: bold;
+}

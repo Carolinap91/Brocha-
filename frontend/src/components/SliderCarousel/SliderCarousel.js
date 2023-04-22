@@ -34,7 +34,7 @@ export const SliderCarousel = () => {
   return (
     <Carousel>
       {photos.map((photo, i) => (
-        <Carousel.Item>
+        <Carousel.Item key={i}>
           <img className="imgSlider" src={photo} alt={`slider ${i}`} />
         </Carousel.Item>
       ))}

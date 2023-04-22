@@ -1,32 +1,51 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+import {
+  ArtistView,
+  ArtistPic,
+  ArtistPhotos,
+  ChatUser,
+  Error,
+  Spinner,
+} from "../Components";
+import { useArtistDetail } from "../Hooks/useArtistDetail";
+import "./UsersView.css";
 
-import {ArtistView, ArtistPic, ArtistPhotos, ChatUser } from '../Components'
+export const UsersView = () => {
+  const { id } = useParams();
+  const { isLoading, error, artist } = useArtistDetail(id);
 
+  if (error) {
+    return <Error />;
+  }
 
-export const UsersView = ()  => {
-    return (
-        <div>
-            <div className="body">
-                <div class="container" >
-                    <div class="row">
-                        <div className= "col-6">
-                            <ArtistView/> 
-                        </div>
-                        <div className="col-6">
-                            {/* <ArtistPic /> */} 2
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div className= "col-8">
-                            {/* <ArtistPhotos /> */} 3
-                        </div>
-                        <div className="col-4">
-                            {/* <ChatUser/> */} 4
-                        </div>
-                    </div>
-                </div>
-            </div>
+  if (isLoading) {
+    return <Spinner />;
+  }
+
+  if (!artist) {
+    return;
+  }
+
+  return (
+    <div class="container users-view">
+      <div class="row">
+        <div className="col-6">
+          <ArtistView artist={artist} />
         </div>
-    );
+        <div className="col-6">
+          {" "}
+          <ArtistPic artist={artist} />{" "}
+        </div>
+      </div>
+      <hr />
+      <div class="row">
+        <div className="col-8">
+          {" "}
+          <ArtistPhotos artist={artist} />{" "}
+        </div>
+        <div className="col-4">{/* <ChatUser/> */} </div>
+      </div>
+    </div>
+  );
 };

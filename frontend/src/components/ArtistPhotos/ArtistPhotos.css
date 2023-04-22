@@ -1,0 +1,12 @@
+.artistPhotos {
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+.artistPhotos img {
+    
+    border-radius: 30px;
+    max-height: 200px;
+}

@@ -1,22 +1,20 @@
 import React from "react";
 import "./ArtistView.css";
-// import {photo1} from '../../img/icons/igIcon.png'
+import photo1 from "../../img/icons/igIcon.png";
+import photo2 from "../../img/icons/fbIcon.png";
+import photo3 from "../../img/icons/twitterIcon.png";
+import photo4 from "../../img/icons/wwwIcon.png";
 
-export const ArtistView = () => {
-
-return (
+export const ArtistView = (props) => {
+  const { artist } = props;
+  const photos = [photo1, photo2, photo3, photo4];
+  return (
     <div className="">
-        <h3>Esther Andar</h3>
-        <p> "Nor again is there anyone who loves or pursues or desires to obtain pain
-            of itself, because it is pain, but occasionally circumstances occur in which toil and
-            pain can procure him some great pleasure". </p>
-
-            {/* <img className="imgLogos" src={photo1}  /> */}
-            {/* <img className="imgLogos" sphoto1oto2}  />
-            <img className="imgLogos" src={photo1}  />
-            <img className="imgLogos" src={photo1}  /> */}
-
-    </div> 
-    
-    )
+      <h3>{artist.name}</h3>
+      <p> {artist.description}. </p>
+      {photos.map((photo) => (
+        <img className="imgLogos" src={photo} />
+      ))}
+    </div>
+  );
 };

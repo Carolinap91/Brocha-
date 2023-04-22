@@ -1,14 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import LocalIcon from "../../img/icons/localIcon.png";
 import HeartIcon from "../../img/icons/heartIcon.png";
 import "./ArtistList.css";
 
 export const ArtistList = (props) => {
   const { artists } = props;
+  const navigate = useNavigate()
+
+  const handleArtistClick = (artist)=>{
+    navigate(`/users/${artist._id}`)
+  };
+
   return (
     <div>
       {artists.map((artist, i) => (
-        <div className="profileCard" key={i}>
+        <div className="profileCard" key={i} onClick={()=> {handleArtistClick(artist)}}>
           <div className="profilePic">
             <img src={artist.profilePic} alt="img profile" />
           </div>
