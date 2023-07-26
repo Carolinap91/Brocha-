@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { searchUsers } from "../Services/AppService";
+import { searchUsers } from "../services/AppService";
 
 export const useArtists = (filters = {}) => {
   const [isLoading, setIsLoading] = useState(false);

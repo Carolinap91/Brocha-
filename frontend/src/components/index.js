@@ -14,5 +14,3 @@ export * from './NoArtistsFound/NoArtistsFound'
 export * from './ArtistView/ArtistView'
 
 
-
-

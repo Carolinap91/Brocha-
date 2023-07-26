@@ -1,5 +1,5 @@
 import React from "react";
-import {SliderCarousel, ArtistSearch} from '../Components';
+import {SliderCarousel, ArtistSearch} from '../components';
 
 import './Home.css'
 

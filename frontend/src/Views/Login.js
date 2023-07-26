@@ -1,5 +1,5 @@
 import React from "react";
-import {SliderCarousel, LoginUser } from '../Components';
+import {SliderCarousel, LoginUser } from '../components';
 
 
 export const Login = () => {

@@ -4,10 +4,9 @@ import {
   ArtistView,
   ArtistPic,
   ArtistPhotos,
-  ChatUser,
   Error,
   Spinner,
-} from "../Components";
+} from "../components";
 import { useArtistDetail } from "../Hooks/useArtistDetail";
 import "./UsersView.css";
 

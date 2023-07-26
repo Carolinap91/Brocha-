@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getUserDetails } from "../Services/AppService";
+import { getUserDetails } from "../services/AppService";
 
 export const useArtistDetail = (id) => {
   const [isLoading, setIsLoading] = useState(false);

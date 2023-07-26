@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {NavBarMenu, Footer} from './Components'
+import {NavBarMenu, Footer} from './components'
 import {Home, CreateUser, UsersView, Login} from './Views'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
